@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects List</title>
+</head>
+<body>
+    <header>
+        <h1>Subjects</h1>
+    </header>
+    <section id="subject-list">
+        <ul>
+            <li><a href="#" onclick="showDetails(1)">AI</a></li>
+            <li><a href="#" onclick="showDetails(2)">WAD</a></li>
+            <li><a href="#" onclick="showDetails(3)">CD</a></li>
+            <li><a href="#" onclick="showDetails(4)">BDA</a></li>
+            <li><a href="#" onclick="showDetails(5)">CNS</a></li>
+            <li><a href="#" onclick="showDetails(6)">EE</a></li>
+            <li><a href="#" onclick="showDetails(7)">CLAD</a></li>
+            <li><a href="#" onclick="showDetails(8)">IC</a></li>
+        </ul>
+    </section>
+    <section id="subject-details" style="display: none;">
+        <h2>Subject Details</h2>
+        <p id="subject-description"></p>
+    </section>
+    <script>
+        function showDetails(id) {
+            const descriptions = [
+                "Artificial Intelligence<br>Instructor: <br>Room Number: <br>Credits: ",
+                "Web Application Development<br>Instructor: <br>Room Number: <br>Credits: ",
+                "Compiler Design<br>Instructor: <br>Room Number: <br>Credits: ",
+                "Big Data Analytics<br>Instructor: <br>Room Number: <br>Credits: ",
+                "Computer Network Security<br>Instructor: <br>Room Number: <br>Credits: ",
+                "Engineering Economics<br>Instructor: <br>Room Number: <br>Credits: ",
+                "CLAD<br>Instructor: <br>Room Number: <br>Credits: ",
+                "Intermediate Coding<br>Instructor: <br>Room Number: <br>Credits: "
+            ];
+            document.getElementById('subject-description').innerHTML = descriptions[id - 1];
+            document.getElementById('subject-details').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
