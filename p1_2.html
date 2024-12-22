@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+</head>
+<body>
+    <header>
+        <h1>Weekly Timetable</h1>
+    </header>
+    <section id="timetable-list">
+        <ul>
+            <li><a href="#" onclick="showDetails(1)">Sunday</a></li>
+            <li><a href="#" onclick="showDetails(2)">Monday</a></li>
+            <li><a href="#" onclick="showDetails(3)">Tuesday</a></li>
+            <li><a href="#" onclick="showDetails(4)">Wednesday</a></li>
+            <li><a href="#" onclick="showDetails(5)">Thursday</a></li>
+            <li><a href="#" onclick="showDetails(6)">Friday</a></li>
+            <li><a href="#" onclick="showDetails(7)">Saturday</a></li>
+        </ul>
+    </section>
+    <section id="day-details" style="display: none;">
+        <h2>Timetable for <span id="day-name"></span></h2>
+        <p id="day-subjects"></p>
+    </section>
+    <script>
+        function showDetails(id) {
+            const timetable = [
+                "No classes today.",
+                "<strong>9:00 AM - 10:00 AM:</strong> CNS 507<br>" +
+                "<strong>10:00 AM - 11:00 AM:</strong> WAD lab 219<br>" +
+                "<strong>11:00 AM - 12:00 PM:</strong> WAD lab 219<br>" +
+                "<strong>2:00 PM - 3:00 PM:</strong> IC 508<br>" +
+                "<strong>3:00 PM - 4:00 PM:</strong> IC 508",
+                "<strong>8:00 AM - 9:00 AM:</strong> WAD 505<br>" +
+                "<strong>9:00 AM - 10:00 AM:</strong> CD 506<br>" +
+                "<strong>10:00 AM - 11:00 AM:</strong> AI 507<br>" +
+                "<strong>11:00 AM - 12:00 PM:</strong> BDA 505<br>" +
+                "<strong>12:00 PM - 1:00 PM:</strong> EE 307<br>" +
+                "<strong>2:00 PM - 3:00 PM:</strong> CLAD 507<br>" +
+                "<strong>3:00 PM - 4:00 PM:</strong> CLAD 507",
+                "<strong>8:00 AM - 9:00 AM:</strong> CD 506<br>" +
+                "<strong>9:00 AM - 10:00 AM:</strong> CNS 507<br>" +
+                "<strong>10:00 AM - 11:00 AM:</strong> WAD 505<br>" +
+                "<strong>11:00 AM - 12:00 PM:</strong> AI 507<br>" +
+                "<strong>12:00 PM - 1:00 PM:</strong> EE 307",
+                "<strong>8:00 AM - 9:00 AM:</strong> CNS 507<br>" +
+                "<strong>9:00 AM - 10:00 AM:</strong> WAD 505<br>" +
+                "<strong>10:00 AM - 11:00 AM:</strong> CD 506<br>" +
+                "<strong>11:00 AM - 12:00 PM:</strong> BDA 505<br>" +
+                "<strong>12:00 PM - 1:00 PM:</strong> EE 307<br>" +
+                "<strong>2:00 PM - 3:00 PM:</strong> AI lab 513<br>" +
+                "<strong>3:00 PM - 4:00 PM:</strong> AI lab 513",
+                "<strong>8:00 AM - 9:00 AM:</strong> AI 507<br>" +
+                "<strong>9:00 AM - 10:00 AM:</strong> BDA 505<br>" +
+                "<strong>10:00 AM - 11:00 AM:</strong> CD lab 219<br>" +
+                "<strong>11:00 AM - 12:00 PM:</strong> CD lab 219",
+                "No classes today."
+            ];
+            document.getElementById('day-name').innerText = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][id - 1];
+            document.getElementById('day-subjects').innerHTML = timetable[id - 1];
+            document.getElementById('day-details').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
