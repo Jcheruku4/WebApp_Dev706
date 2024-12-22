@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to</h1>
+        <a href="#" onclick="showInfo()">GITAM University</a>
+    </header>
+    <section id="info" style="display: none;">
+        <h2>About GITAM University</h2>
+        <p>
+            Gandhi Institute of Technology and Management<br>
+            <strong>Founded:</strong> 1980<br>
+            <strong>Founded by:</strong> Dr. M.V.V. Satsivam<br>
+            <strong>Branches:</strong> Visakhapatnam, Hyderabad, Bengaluru<br>
+            <strong>Courses offered:</strong> Engineering, Management, Pharmacy and more.
+        </p>
+    </section>
+    <script>
+        function showInfo() {
+            document.getElementById('info').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
